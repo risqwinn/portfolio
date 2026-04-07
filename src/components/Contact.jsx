@@ -8,7 +8,6 @@ export default function Contact() {
     setResult("Sedang mengirim....");
     const formData = new FormData(event.target);
 
-    // MASUKKAN ACCESS KEY KAMU DI SINI
     formData.append("access_key", "e80f0f9c-06fc-40ed-8981-7627d672879f");
 
     const response = await fetch("https://api.web3forms.com/submit", {
