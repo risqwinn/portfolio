@@ -47,12 +47,6 @@ export default function Footer() {
             >
               <FaInstagramSquare />
             </a>
-            <a 
-              href="mailto:emailkamu@gmail.com" 
-              className="text-white/50 hover:text-green-500 hover:scale-110 transition-all"
-            >
-              <FaEnvelope />
-            </a>
           </div>
         </div>
 
