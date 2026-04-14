@@ -14,14 +14,13 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl font-light tracking-wide">
-            Sedang belajar membangun backend dari nol — dari API, database, sampai
-            server menggunakan Express.js.
+            Seorang siswa jurusan Pengembangan Perangkat Lunak & Gim yang berfokus dalam mengembangkan aplikasi web modern dan efisien
           </p>
 
           <p className="mt-4 text-lg md:text-xl text-white/80 max-w-2xl font-light tracking-wide">
-            Backend Developer |{" "}
+            Programmer |{" "}
             <span className="font-semibold text-green-500">
-              Node.js, Express, & MongoDB
+              Web Developer
             </span>
           </p>
 

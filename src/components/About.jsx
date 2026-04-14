@@ -6,16 +6,15 @@ export default function About() {
         <div className="w-16 h-1.5 bg-green-500 mx-auto mt-4 rounded-full"></div>
 
         <p className="mt-8 text-black/80 leading-relaxed text-lg">
-          Saya adalah seorang siswa yang sedang belajar menjadi 
-          <span className="font-bold text-green-600"> Backend Developer</span>. 
-          Saya dapat bekerja sama tim dan berkomunikasi dengan cukup baik dan memiliki minat besar dalam membangun REST API dan sistem server 
-          menggunakan <span className="italic text-blue-950 font-medium">Node.js dan Express.js</span>. 
-          Saat ini saya fokus memahami bagaimana membuat backend yang terstruktur, 
-          efisien, dan mudah dikembangkan.
+          Saya adalah seorang siswa SMK Wikrama Bogor kelas XI yang sedang belajar 
+          <span className="font-bold text-green-600"> pengembangan web</span> yang baik dan benar.
+          Saya dapat bekerja sama tim dan berkomunikasi dengan cukup baik dan memiliki minat besar dalam membangun sebuah website.
+          Saat ini saya fokus memahami bagaimana membuat website yang responsif, 
+          visual berkualitan, dan konsisten.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {["JavaScript", "Node.js", "Express.js", "MongoDB"].map((skill) => (
+          {["HTML", "CSS", "Tailwind", "Javascript", "React", "PHP", "Laravel"].map((skill) => (
             <span key={skill} className="px-5 py-2 bg-blue-950 text-white rounded-lg text-sm font-bold">
               {skill}
             </span>
