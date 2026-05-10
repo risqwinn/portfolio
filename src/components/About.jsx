@@ -1,25 +1,73 @@
+import { motion } from "framer-motion";
+import profile3 from "../assets/profile3.jpeg";
+
 export default function About() {
   return (
-    <section id="about" className="py-24 flex items-center justify-center bg-white px-5">
-      <div className="max-w-4xl bg-white shadow-2xl shadow-blue-950/10 rounded-3xl p-8 md:p-16 text-center border border-blue-950/5">
-        <h2 className="text-3xl md:text-4xl font-bold text-black">Tentang Saya</h2>
-        <div className="w-16 h-1.5 bg-green-500 mx-auto mt-4 rounded-full"></div>
+    <section
+      id="about"
+      className="min-h-screen bg-[#F8FAFC] flex items-center px-6 md:px-16 py-16 overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* LEFT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          whileOutOfView={{ opacity: 0, x: 120 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          viewport={{
+            once: false,
+            amount: 0.3,
+          }}
+        >
+          <h2 className="text-5xl md:text-6xl font-extrabold text-black">
+            About Me
+          </h2>
 
-        <p className="mt-8 text-black/80 leading-relaxed text-lg">
-          Saya adalah seorang siswa SMK Wikrama Bogor kelas XI yang sedang belajar 
-          <span className="font-bold text-green-600"> pengembangan web</span> yang baik dan benar.
-          Saya dapat bekerja sama tim dan berkomunikasi dengan cukup baik dan memiliki minat besar dalam membangun sebuah website.
-          Saat ini saya fokus memahami bagaimana membuat website yang responsif, 
-          visual berkualitan, dan konsisten.
-        </p>
+          {/* Underline */}
+          <div className="flex items-center gap-3 mt-4">
+            <div className="w-12 h-[2px] bg-black"></div>
+            <div className="w-5 h-[2px] bg-black/40"></div>
+          </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {["HTML", "CSS", "Tailwind", "Javascript", "React", "PHP", "Laravel"].map((skill) => (
-            <span key={skill} className="px-5 py-2 bg-blue-950 text-white rounded-lg text-sm font-bold">
-              {skill}
-            </span>
-          ))}
-        </div>
+          <p className="mt-8 text-gray-500 leading-relaxed max-w-md">
+            {/* Saya adalah seorang siswa SMK Wikrama Bogor kelas XI yang sedang
+            belajar pengembangan web modern dan memiliki minat besar dalam
+            membangun website yang clean, modern, dan interaktif. */}
+            Let me introduce myself
+          </p>
+
+          <button className="mt-8 px-6 py-3 bg-[#1E293B] text-white rounded-full text-sm font-semibold hover:bg-[#3B82F6] transition">
+            Learn More
+          </button>
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          className="flex justify-center md:justify-end"
+          initial={{ opacity: 0, x: 120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          whileOutOfView={{ opacity: 0, x: -120 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          viewport={{
+            once: false,
+            amount: 0.3,
+          }}
+        >
+          <div className="w-[280px] md:w-[350px] h-[380px] overflow-hidden rounded-t-full bg-gray-200 shadow-xl">
+            <img
+              src={profile3}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

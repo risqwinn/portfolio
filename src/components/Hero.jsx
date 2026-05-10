@@ -1,94 +1,66 @@
-import profile from "../assets/profile.png";
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
+import profile4 from "../assets/profile4.png";
 import ShinyText from "./Animations/ShinyText";
 import SplitText from "./Animations/SplitText";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-blue-950 text-white px-5 md:px-20 overflow-hidden">
+    <section id="home" className="pt-32 md:pt-36 min-h-screen flex items-center bg-[#F8FAFC] text-[#0F172A] px-5 md:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-        
         <div className="flex-1 text-center md:text-left z-10">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-[#0F172A]">
             <SplitText text="Halo 👋, saya Riski" speed={150} />
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl font-light tracking-wide">
-            Seorang siswa jurusan Pengembangan Perangkat Lunak & Gim yang berfokus dalam mengembangkan aplikasi web modern dan efisien
+          <p className="mt-6 text-lg md:text-xl text-[#475569] max-w-2xl font-light tracking-wide">
+            Seorang siswa jurusan Pengembangan Perangkat Lunak & Gim yang
+            berfokus dalam mengembangkan aplikasi web modern dan efisien.
           </p>
 
-          <p className="mt-4 text-lg md:text-xl text-white/80 max-w-2xl font-light tracking-wide">
-            Programmer |{" "}
-            <span className="font-semibold text-green-500">
-              Web Developer
-            </span>
+          <p className="mt-4 text-lg md:text-xl text-[#475569] max-w-2xl font-light tracking-wide">
+            Programmer | <span className="font-semibold text-[#3B82F6]">Web Developer</span>
           </p>
 
           <div className="mt-10 flex flex-col items-center md:items-start gap-6">
             <a
               href="/my_cv.pdf"
               download="CV_Riski.pdf"
-              className="px-8 py-3 border-2 border-green-500 rounded-full font-semibold bg-green-500/10 hover:bg-green-500 transition-all flex items-center justify-center overflow-hidden"
+              className="px-8 py-3 border-2 border-[#3B82F6] rounded-full font-semibold bg-[#3B82F6]/10 text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#FFFFFF] transition-all flex items-center justify-center overflow-hidden"
             >
               <ShinyText text="Download CV" speed={3} className="font-bold" />
             </a>
 
             <div className="flex gap-5 text-3xl">
-              <a 
-                href="https://github.com/Riski588" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-green-500 hover:scale-110 transition-all"
-              >
+              <a href="https://github.com/Riski588" target="_blank" rel="noopener noreferrer" className="text-[#475569] hover:text-[#3B82F6] hover:scale-110 transition-all">
                 <FaGithub />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/riski-9147ab387/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-green-500 hover:scale-110 transition-all"
-              >
+              <a href="https://www.linkedin.com/in/riski-9147ab387/" target="_blank" rel="noopener noreferrer" className="text-[#475569] hover:text-[#3B82F6] hover:scale-110 transition-all">
                 <FaLinkedin />
               </a>
-              <a 
-                href="https://www.instagram.com/risski777/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-green-500 hover:scale-110 transition-all"
-              >
+              <a href="https://www.instagram.com/risski777/" target="_blank" rel="noopener noreferrer" className="text-[#475569] hover:text-[#3B82F6] hover:scale-110 transition-all">
                 <FaInstagramSquare />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center md:justify-end items-center relative">
-          <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] flex justify-center items-center">
-            
-            <div className="absolute inset-0 z-0 flex justify-center items-center">
-              <svg 
-                viewBox="0 0 200 200" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full scale-110 opacity-20"
-              >
-                <path
-                  fill="#22c55e" 
-                  d="M64.5,-23.8C72.3,2.8,59.3,33.4,36.8,49.5C14.2,65.6,-18,67.3,-38,52.7C-58,38,-65.8,7.1,-57.4,-20.5C-49.1,-48,-24.5,-72.1,1.9,-72.7C28.4,-73.4,56.8,-50.5,64.5,-23.8Z"
-                  transform="translate(100 100)"
-                />
-              </svg>
-            </div>
-
-            <div className="relative z-10 w-full h-full">
-              <img
-                src={profile}
-                alt="Profile"
-                className="w-full h-full object-contain drop-shadow-2xl" 
-              />
-            </div>
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="relative w-72 h-72 md:w-[450px] md:h-[450px]">
+            <svg viewBox="0 0 200 200" className="w-full h-full">
+              <defs>
+                <clipPath id="blobClip">
+                  <path d="M64.5,-23.8C72.3,2.8,59.3,33.4,36.8,49.5C14.2,65.6,-18,67.3,-38,52.7C-58,38,-65.8,7.1,-57.4,-20.5C-49.1,-48,-24.5,-72.1,1.9,-72.7C28.4,-73.4,56.8,-50.5,64.5,-23.8Z" transform="translate(100 100)" />
+                </clipPath>
+              </defs>
+              <image href={profile4} width="100%" height="100%" clipPath="url(#blobClip)" preserveAspectRatio="xMidYMid meet" />
+            </svg>
           </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

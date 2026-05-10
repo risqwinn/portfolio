@@ -18,7 +18,7 @@ export default function SplitText({ text, speed = 100 }) {
   return (
     <span className="inline-block">
       {displayedText}
-      <span className="ml-1 border-r-4 border-green-500 animate-pulse"></span>
+      <span className="ml-1 border-r-4 border-[#3B82F6] animate-pulse"></span>
     </span>
   );
 }
