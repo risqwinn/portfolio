@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import profile4 from "../assets/profile4.png";
 import ShinyText from "./Animations/ShinyText";
 import SplitText from "./Animations/SplitText";
+import cv from "../assets/my_cv.pdf";
 
 export default function Hero() {
   return (
@@ -24,7 +25,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col items-center md:items-start gap-6">
             <a
-              href="/my_cv.pdf"
+              href={cv}
               download="CV_Riski.pdf"
               className="px-8 py-3 border-2 border-[#3B82F6] rounded-full font-semibold bg-[#3B82F6]/10 text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#FFFFFF] transition-all flex items-center justify-center overflow-hidden"
             >

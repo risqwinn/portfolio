@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SplashScreen from "./components/SplashScreen";
+import InfiniteScroll from "./components/InfiniteScrool";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ export default function App() {
           <Hero />
           <About />
           <Projects />
+          <InfiniteScroll />
           <Contact />
           <Footer />
         </div>
