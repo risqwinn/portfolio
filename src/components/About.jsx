@@ -13,7 +13,7 @@ import {
   FaCss3Alt,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiJavascript, SiDart, SiExpress } from "react-icons/si";
+import { SiTailwindcss, SiJavascript, SiDart, SiExpress, SiFlutter } from "react-icons/si";
 
 export default function About() {
   // Variasi animasi container
@@ -49,8 +49,8 @@ export default function About() {
       icon: <FaLaravel className="text-red-500 text-xl" />,
     },
     {
-      name: "Dart",
-      icon: <SiDart className="text-sky-500 text-xl" />,
+      name: "Flutter",
+      icon: <SiFlutter className="text-sky-500 text-xl" />,
     },
     {
       name: "PHP",
@@ -217,8 +217,6 @@ export default function About() {
               user interfaces. */}
 
             {/* </p> */}
-
-            {/* STACK */}
             <div className="mt-4">
               <h3 className="text-sm font-semibold text-gray-800">
                 Soft Skills
@@ -253,12 +251,9 @@ export default function About() {
                     }}
                     className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
                   >
-                    {/* ICON */}
                     <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100">
                       {stack.icon}
                     </div>
-
-                    {/* TEXT */}
                     <span className="text-sm font-medium text-gray-700">
                       {stack.name}
                     </span>
